@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FSVideoCameraView" customModule="videoRecording" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsJ-aW-Wzl">
+                    <rect key="frame" x="165" y="223" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.95725053548812866" green="0.9961426854133606" blue="0.0064542856998741627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="pka-7D-qjN"/>
+                        <constraint firstAttribute="height" constant="30" id="u5g-Im-N6n"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="0.82745098039999998" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.9647325873374939" green="0.57469433546066284" blue="0.15449517965316772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="shotButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="vAk-fv-Nwu"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voh-sq-9bN" customClass="FSVideoCameraView" customModule="videoRecording" customModuleProvider="target">
+                    <rect key="frame" x="48" y="45" width="279" height="155"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="279" id="Qab-fA-jc9"/>
+                        <constraint firstAttribute="height" constant="155" id="eP2-BA-Qg2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vsJ-aW-Wzl" firstAttribute="top" secondItem="voh-sq-9bN" secondAttribute="bottom" constant="23.5" id="Y9F-Ar-9gz"/>
+                <constraint firstItem="voh-sq-9bN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="czP-mV-JxZ"/>
+                <constraint firstItem="voh-sq-9bN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="iPS-ig-R65"/>
+                <constraint firstItem="vsJ-aW-Wzl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yBl-yl-qaC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="previewViewContainer" destination="voh-sq-9bN" id="KUN-HX-tmw"/>
+                <outlet property="shotButton" destination="vsJ-aW-Wzl" id="Tk6-Ko-e6K"/>
+            </connections>
+            <point key="canvasLocation" x="28.5" y="0.5"/>
+        </view>
+    </objects>
+</document>
